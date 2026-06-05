@@ -508,12 +508,15 @@ body{
 </head>
 <body>
 
+<!-- Pixel BG -->
 <div class="pixel-bg" id="pixelBg"></div>
 
+<!-- ===== PAGE 1 — POKEBALL ===== -->
 <div class="page active" id="page1">
   <div class="p1-wrap">
     <div class="p1-title" id="p1Title">A WILD MESSAGE<br>HAS APPEARED!</div>
     <div class="pokeball-btn" id="envelopeBtn">
+      <!-- LOVE BALL SVG -->
       <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <radialGradient id="lbTopGrad" cx="38%" cy="32%" r="68%">
@@ -532,30 +535,45 @@ body{
             <stop offset="100%" stop-color="#dd6688"/>
           </radialGradient>
         </defs>
+        <!-- outer shadow ring -->
         <circle cx="100" cy="100" r="97" fill="#600018" opacity="0.4"/>
+        <!-- Top half — red/pink -->
         <path d="M3 100 A97 97 0 0 1 197 100 Z" fill="url(#lbTopGrad)"/>
+        <!-- Bottom half — white/pink -->
         <path d="M3 100 A97 97 0 0 0 197 100 Z" fill="url(#lbBotGrad)"/>
+        <!-- Band -->
         <rect x="3" y="93" width="194" height="14" fill="#1a0008"/>
+        <!-- Band highlight -->
         <rect x="3" y="93" width="194" height="3" rx="1" fill="rgba(255,255,255,.2)"/>
+        <!-- Big heart LEFT on top half -->
         <path d="M44 54 C44 46, 36 38, 28 44 C20 50, 20 62, 28 70 L44 84 L60 70 C68 62, 68 50, 60 44 C52 38, 44 46, 44 54 Z" fill="#fff" opacity="0.95"/>
+        <!-- Big heart RIGHT on top half -->
         <path d="M156 54 C156 46, 148 38, 140 44 C132 50, 132 62, 140 70 L156 84 L172 70 C180 62, 180 50, 172 44 C164 38, 156 46, 156 54 Z" fill="#fff" opacity="0.95"/>
+        <!-- Inner heart fill (pink tint) -->
         <path d="M44 57 C44 51, 38 45, 32 50 C26 55, 26 64, 32 70 L44 80 L56 70 C62 64, 62 55, 56 50 C50 45, 44 51, 44 57 Z" fill="#ffb0c8" opacity="0.7"/>
         <path d="M156 57 C156 51, 150 45, 144 50 C138 55, 138 64, 144 70 L156 80 L168 70 C174 64, 174 55, 168 50 C162 45, 156 51, 156 57 Z" fill="#ffb0c8" opacity="0.7"/>
+        <!-- Small hearts on bottom half -->
         <path d="M80 128 C80 124, 76 120, 72 123 C68 126, 68 132, 72 136 L80 142 L88 136 C92 132, 92 126, 88 123 C84 120, 80 124, 80 128 Z" fill="#ff6090" opacity="0.5"/>
         <path d="M120 132 C120 129, 117 126, 114 128 C111 131, 111 136, 114 139 L120 143 L126 139 C129 136, 129 131, 126 128 C123 126, 120 129, 120 132 Z" fill="#ff6090" opacity="0.4"/>
+        <!-- Center button -->
         <circle cx="100" cy="100" r="21" fill="#1a0008"/>
         <circle cx="100" cy="100" r="18" fill="url(#lbCenterGrad)"/>
         <circle cx="100" cy="100" r="12" fill="#1a0008"/>
         <circle cx="100" cy="100" r="10" fill="url(#lbCenterGrad)"/>
+        <!-- Center shine -->
         <circle cx="94" cy="94" r="4" fill="rgba(255,255,255,.8)"/>
+        <!-- Pulse ring -->
         <circle cx="100" cy="100" r="21" fill="none" stroke="#ff80a8" stroke-width="2" opacity="0.5">
           <animate attributeName="r" values="21;30;21" dur="2s" repeatCount="indefinite"/>
           <animate attributeName="opacity" values="0.5;0;0.5" dur="2s" repeatCount="indefinite"/>
         </circle>
+        <!-- Top shine -->
         <ellipse cx="70" cy="46" rx="24" ry="11" fill="rgba(255,255,255,.22)" transform="rotate(-20,70,46)"/>
+        <!-- Sparkle dots -->
         <circle cx="100" cy="25" r="2.5" fill="#fff" opacity="0.9"/>
         <circle cx="158" cy="44" r="2" fill="#ffb0c8" opacity="0.8"/>
         <circle cx="40" cy="36" r="1.8" fill="#fff" opacity="0.7"/>
+        <!-- outer border -->
         <circle cx="100" cy="100" r="97" fill="none" stroke="#1a0008" stroke-width="3"/>
       </svg>
     </div>
@@ -563,6 +581,7 @@ body{
   </div>
 </div>
 
+<!-- ===== PAGE 2 — PHOTOS ===== -->
 <div class="page" id="page2">
   <div class="pokedex-frame">
     <div class="dex-top-lights">
@@ -604,6 +623,7 @@ body{
   <input type="file" id="fileInput2" accept="image/*" style="display:none">
 </div>
 
+<!-- ===== PAGE 3 — LETTER ===== -->
 <div class="page" id="page3">
   <div class="poke-letter">
     <div class="letter-header">
@@ -628,9 +648,11 @@ body{
   </div>
 </div>
 
+<!-- ===== PAGE 4 — POKEMON CAKE ===== -->
 <div class="page" id="page4">
   <div class="cake-wrap">
     <div class="cake-title" id="p4Title">PIKA PIKA!<br>BLOW THE CANDLES!</div>
+    <!-- cake container: position relative so candles can overlay exactly on top tier -->
     <div id="cakeOuter" style="position:relative;display:inline-block;flex-shrink:0;">
       <svg id="cakeSvg" viewBox="0 0 200 240" fill="none" xmlns="http://www.w3.org/2000/svg"
            style="width:clamp(220px,54vw,300px);height:auto;display:block;">
@@ -648,14 +670,18 @@ body{
             <stop offset="100%" stop-color="#f57f00"/>
           </radialGradient>
         </defs>
+        <!-- PLATE -->
         <ellipse cx="100" cy="228" rx="78" ry="10" fill="#b8860b" opacity="0.7"/>
         <ellipse cx="100" cy="224" rx="78" ry="10" fill="#e8c830"/>
         <ellipse cx="100" cy="221" rx="78" ry="7" fill="#fff9b0"/>
+        <!-- BOTTOM TIER -->
         <ellipse cx="100" cy="193" rx="72" ry="10" fill="#a07000" opacity="0.35"/>
         <rect x="28" y="162" width="144" height="32" rx="4" fill="url(#cg3)"/>
         <ellipse cx="100" cy="162" rx="72" ry="10" fill="url(#cg1)"/>
         <ellipse cx="100" cy="194" rx="72" ry="10" fill="#c8890a"/>
+        <!-- frosting bottom -->
         <path d="M32 162 Q39 148 46 162 Q53 148 60 162 Q67 148 74 162 Q81 148 88 162 Q95 148 102 162 Q109 148 116 162 Q123 148 130 162 Q137 148 144 162 Q151 148 158 162 Q165 148 168 162" stroke="#fffde0" stroke-width="5" fill="none" stroke-linecap="round"/>
+        <!-- pokeball deco -->
         <circle cx="54" cy="177" r="9" fill="#fff9b0" stroke="#b8860b" stroke-width="1.5"/>
         <path d="M45 177 h18" stroke="#b8860b" stroke-width="1.5"/>
         <path d="M45 177 Q47 169 54 169 Q61 169 63 177" fill="#ffcb05"/>
@@ -664,32 +690,42 @@ body{
         <path d="M137 177 h18" stroke="#b8860b" stroke-width="1.5"/>
         <path d="M137 177 Q139 169 146 169 Q153 169 155 177" fill="#ffcb05"/>
         <circle cx="146" cy="177" r="3" fill="#fff" stroke="#b8860b" stroke-width="1"/>
+        <!-- sparkles bottom -->
         <circle cx="88" cy="172" r="2.5" fill="#fff9b0" opacity="0.8"/>
         <circle cx="112" cy="184" r="2" fill="#fff9b0" opacity="0.7"/>
+        <!-- MIDDLE TIER -->
         <ellipse cx="100" cy="148" rx="54" ry="9" fill="#a07000" opacity="0.3"/>
         <rect x="46" y="120" width="108" height="29" rx="4" fill="url(#cg2)"/>
         <ellipse cx="100" cy="120" rx="54" ry="9" fill="url(#cg1)"/>
         <ellipse cx="100" cy="149" rx="54" ry="9" fill="#c8890a"/>
+        <!-- frosting middle -->
         <path d="M50 120 Q57 110 64 120 Q71 110 78 120 Q85 110 92 120 Q99 110 106 120 Q113 110 120 120 Q127 110 134 120 Q141 110 146 120" stroke="#fffde0" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <!-- stars middle -->
         <polygon points="80,133 82,127 84,133 90,133 85,137 87,143 82,139 77,143 79,137 74,133" fill="#fff9b0" opacity="0.9"/>
         <polygon points="120,131 122,125 124,131 130,131 125,135 127,141 122,137 117,141 119,135 114,131" fill="#fff9b0" opacity="0.9"/>
+        <!-- TOP TIER -->
         <ellipse cx="100" cy="108" rx="36" ry="8" fill="#a07000" opacity="0.25"/>
         <rect x="64" y="82" width="72" height="27" rx="4" fill="url(#cg2)"/>
         <ellipse cx="100" cy="82" rx="36" ry="8" fill="#ffe566"/>
         <ellipse cx="100" cy="109" rx="36" ry="8" fill="#c8890a"/>
+        <!-- frosting top -->
         <path d="M66 82 Q72 73 78 82 Q84 73 90 82 Q96 73 102 82 Q108 73 114 82 Q120 73 126 82 Q130 73 134 82" stroke="#fffde0" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+        <!-- pokeball center top tier -->
         <circle cx="100" cy="95" r="10" fill="#fff9b0" stroke="#b8860b" stroke-width="1.5"/>
         <path d="M90 95 h20" stroke="#b8860b" stroke-width="1.5"/>
         <path d="M90 95 Q92 86 100 86 Q108 86 110 95" fill="#ffcb05"/>
         <circle cx="100" cy="95" r="3.5" fill="#fff" stroke="#b8860b" stroke-width="1"/>
+        <!-- RIBBON banner -->
         <rect x="20" y="204" width="160" height="17" rx="3" fill="#ffcb05"/>
         <rect x="20" y="204" width="160" height="3" rx="1" fill="#ffe566"/>
         <rect x="20" y="218" width="160" height="3" rx="1" fill="#c8890a"/>
         <text x="100" y="216" text-anchor="middle" font-family="'Press Start 2P',monospace" font-size="6" fill="#5d3300">HAPPY BIRTHDAY!</text>
         <polygon points="20,204 12,212 20,221" fill="#e8a800"/>
         <polygon points="180,204 188,212 180,221" fill="#e8a800"/>
+        <!-- lightning side deco -->
         <polygon points="12,172 16,158 14,165 18,152 14,164 16,159" fill="#ffcb05" opacity="0.85"/>
         <polygon points="188,172 184,158 186,165 182,152 186,164 184,159" fill="#ffcb05" opacity="0.85"/>
+        <!-- sparkle animate -->
         <circle cx="16" cy="108" r="2.5" fill="#ffe566">
           <animate attributeName="opacity" values="0.3;0.9;0.3" dur="2.1s" repeatCount="indefinite"/>
         </circle>
@@ -697,6 +733,7 @@ body{
           <animate attributeName="opacity" values="0.2;0.8;0.2" dur="1.8s" repeatCount="indefinite"/>
         </circle>
       </svg>
+      <!-- Candles overlay positioned absolutely over the top tier of the cake -->
       <div id="candlesArea" style="
         position:absolute;
         top:0; left:50%; transform:translateX(-50%);
@@ -711,8 +748,10 @@ body{
 </div>
 
 
+<!-- ===== PAGE 5 — VICTORY ===== -->
 <div class="page" id="page5">
   <div class="pokedex-frame">
+    <!-- Same top lights as page 2 -->
     <div class="dex-top-lights">
       <div class="dex-biglight" style="background:radial-gradient(circle,#ffe566 20%,#ffcb05 60%,#e8a800 100%);box-shadow:0 0 15px rgba(255,203,5,.8), inset 0 3px 0 rgba(255,255,255,.4);"></div>
       <div class="dex-smalllights">
@@ -722,12 +761,16 @@ body{
       </div>
     </div>
 
+    <!-- Screen area (green Pokédex screen) -->
     <div class="dex-screen" style="padding:14px 12px 10px;">
 
+      <!-- Title row inside screen -->
       <div style="font-family:'Press Start 2P',monospace;font-size:clamp(0.55rem,1.8vw,0.78rem);color:#0f2a0f;text-align:center;margin-bottom:10px;line-height:1.8;" id="p5Title">HAPPY BIRTHDAY!</div>
 
+      <!-- Divider pixel line -->
       <div style="height:3px;background:repeating-linear-gradient(90deg,#306230 0px,#306230 4px,#9bbc0f 4px,#9bbc0f 8px);margin-bottom:10px;border-radius:2px;opacity:0.7;"></div>
 
+      <!-- XP bar inside screen -->
       <div style="margin-bottom:10px;">
         <div style="font-family:'Press Start 2P',monospace;font-size:0.45rem;color:#306230;margin-bottom:5px;line-height:1.8;">HAPPINESS LV.MAX</div>
         <div style="height:10px;background:#1a3a1a;border-radius:5px;overflow:hidden;border:1px solid #306230;">
@@ -735,15 +778,21 @@ body{
         </div>
       </div>
 
+      <!-- Subtitle line -->
       <div style="font-family:'Press Start 2P',monospace;font-size:clamp(0.45rem,1.4vw,0.6rem);color:#1a3a1a;text-align:center;margin-bottom:10px;line-height:2;" id="p5SubTitle">สุขสันต์วันเกิดนะที่รัก</div>
 
+      <!-- Dialog box inside dex screen -->
       <div style="background:#1a3a1a;border:2px solid #306230;border-radius:3px;padding:10px 12px;position:relative;">
+        <!-- dialog caret top-left -->
         <div style="position:absolute;top:-8px;left:16px;width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;border-bottom:8px solid #306230;"></div>
         <div style="position:absolute;top:-5px;left:18px;width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-bottom:6px solid #1a3a1a;"></div>
         <p style="font-family:'Noto Sans Thai',sans-serif;font-size:clamp(0.78rem,2.2vw,0.92rem);color:#9bbc0f;line-height:1.75;margin:0;" id="p5Sub">พรุ่งนี้เจอกัน ไปเที่ยวด้วยกันนะคะ</p>
       </div>
 
-    </div><div class="dex-bottom">
+    </div><!-- /dex-screen -->
+
+    <!-- Same bottom D-pad row as page 2 -->
+    <div class="dex-bottom">
       <div class="dex-dpad"><div class="dpad-h"></div><div class="dpad-v"></div></div>
       <div style="display:flex;gap:8px;align-items:center;">
         <button class="replay-btn" onclick="goToPage(1)" style="padding:8px 14px;font-size:0.5rem;margin:0;box-shadow:0 4px 0 #a07800;">&#9658; AGAIN</button>
@@ -754,8 +803,10 @@ body{
 
 
 
+<!-- DRAWER BACKDROP -->
 <div class="drawer-backdrop" id="drawerBackdrop" onclick="closeDrawer()"></div>
 
+<!-- EDIT DRAWER -->
 <div class="edit-drawer" id="editDrawer">
   <div class="drawer-header">
     <h3>✏️ EDIT MODE</h3>
@@ -832,6 +883,7 @@ body{
 </div>
 
 
+<!-- NAV -->
 <nav class="nav">
   <button class="nav-arrow" onclick="prevPage()">◀</button>
   <div class="nav-dot active" onclick="goToPage(1)"></div>
